@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan de Prevención de Adicciones - Envíalo Seguro S.A.</title>
+    
+    <!-- Meta tags para previsualización en WhatsApp -->
+    <meta property="og:title" content="Plan de Prevención - Envíalo Seguro S.A.">
+    <meta property="og:description" content="Programa Institucional Transporte Sin Adicciones. Cuidamos tu vida y la de tu familia en las rutas.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=800&q=80">
+    <meta property="og:type" content="website">
+    
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Chart.js para gráficos dinámicos -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Lato', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        darkTeal: '#0c364c',
+                        midBlue: '#21739b',
+                        teal: '#348f93',
+                        lightBlue: '#e5f1f6',
+                        brandYellow: '#fcc010',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Animaciones suaves */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Acordeón */
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+        }
+        .accordion-button.active .fa-chevron-down {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased selection:bg-teal selection:text-white pb-20">
+
+    <!-- Header (Fijo) -->
+    <header class="fixed top-0 w-full bg-white shadow-md z-50">
+        <div class="max-w-md mx-auto px-6 py-4 flex items-center justify-center gap-3">
+            <i class="fa-solid fa-cube text-3xl text-brandYellow"></i>
+            <span class="font-heading font-extrabold text-darkTeal text-xl leading-tight">Envíalo<br>Seguro S.A.</span>
+        </div>
+    </header>
+
+    <!-- Contenedor principal móvil -->
+    <main class="max-w-md mx-auto bg-white min-h-screen shadow-xl pt-20 pb-10">
+        
+        <!-- Hero Section -->
+        <section class="bg-darkTeal text-white px-6 py-10 rounded-b-3xl relative overflow-hidden">
+            <!-- Patrón de fondo sutil -->
+            <div class="absolute top-0 right-0 opacity-10">
+                <i class="fa-solid fa-truck-shield text-9xl -mr-10 -mt-10"></i>
+            </div>
+            
+            <div class="relative z-10 fade-in-up">
+                <span class="inline-block px-3 py-1 bg-brandYellow text-darkTeal font-bold text-xs rounded-full uppercase tracking-wider mb-4">
+                    Programa Institucional
+                </span>
+                <h1 class="font-heading text-3xl font-bold leading-tight mb-4">
+                    Plan de Prevención Integral "Transporte Sin Adicciones"
+                </h1>
+                <p class="text-lightBlue text-lg">
+                    Garantizando la seguridad vial, el respaldo técnico y el bienestar de nuestro equipo.
+                </p>
+            </div>
+        </section>
+
+        <!-- Imagen principal Actualizada (Visión desde Cabina) -->
+        <div class="px-6 -mt-6 relative z-20 fade-in-up">
+            <img src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=800&q=80" 
+                 alt="[Imagen de Conductor en Cabina de Transporte]" 
+                 class="h-56 w-full object-cover shadow-lg border-4 border-white rounded-2xl bg-white"
+                 onerror="this.src='https://via.placeholder.com/800x400?text=Imagen+No+Disponible'">
+        </div>
+
+        <!-- Sección 1: Marco Legal y Justificación -->
+        <section class="px-6 pt-12 pb-6">
+            <div class="text-center mb-8 fade-in-up">
+                <h2 class="font-heading text-2xl font-bold text-darkTeal mb-2">Fundamentos y Justificación</h2>
+                <div class="w-16 h-1 bg-teal mx-auto rounded"></div>
+            </div>
+
+            <div class="space-y-4 fade-in-up mb-8">
+                <!-- Acordeón 1: Base Legal -->
+                <div class="border border-gray-200 rounded-xl overflow-hidden bg-white shadow-sm">
+                    <button class="accordion-button w-full px-5 py-4 flex items-center justify-between bg-lightBlue/30 hover:bg-lightBlue/50 transition-colors focus:outline-none" onclick="toggleAccordion(this)">
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-full bg-midBlue text-white flex items-center justify-center font-bold text-sm">1</div>
+                            <h3 class="font-heading font-bold text-darkTeal text-left">Obligación y Enfoque Legal</h3>
+                        </div>
+                        <i class="fa-solid fa-chevron-down text-midBlue transition-transform duration-300"></i>
+                    </button>
+                    <div class="accordion-content px-5">
+                        <div class="py-4 border-t border-gray-100">
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                Basado en el <strong>Acuerdo Interministerial Nro. MDT-MSP-2019-0038</strong>, es obligatorio implementar este programa. La normativa prohíbe taxativamente la criminalización o el despido automático, priorizando el apoyo biopsicosocial, la confidencialidad y la rehabilitación coordinada a través de la Red Pública Integral de Salud.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Acordeón 2: Efecto Túnel -->
+                <div class="border border-gray-200 rounded-xl overflow-hidden bg-white shadow-sm">
+                    <button class="accordion-button w-full px-5 py-4 flex items-center justify-between bg-lightBlue/30 hover:bg-lightBlue/50 transition-colors focus:outline-none" onclick="toggleAccordion(this)">
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-full bg-midBlue text-white flex items-center justify-center font-bold text-sm">2</div>
+                            <h3 class="font-heading font-bold text-darkTeal text-left">Efecto Túnel y Sanciones COIP</h3>
+                        </div>
+                        <i class="fa-solid fa-chevron-down text-midBlue transition-transform duration-300"></i>
+                    </button>
+                    <div class="accordion-content px-5">
+                        <div class="py-4 border-t border-gray-100">
+                            <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                                Las sustancias provocan el <strong>efecto túnel</strong> (reduce visión periférica y duplica el tiempo de reacción). El COIP castiga estos accidentes con penas privativas de libertad, revocatoria de licencia y corresponsabilidad civil para la empresa.
+                            </p>
+                            
+                            <!-- Tarjeta KPI Efecto Túnel -->
+                            <div class="bg-red-50 border border-red-200 rounded-xl p-4 flex items-center gap-4">
+                                <div class="bg-red-500 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl shrink-0 shadow-sm">
+                                    <i class="fa-solid fa-gauge-high"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-red-600 font-bold uppercase tracking-wider mb-1">Peligro Inminente</p>
+                                    <p class="text-sm text-gray-800 leading-tight">A <strong>90 km/h</strong>, un solo segundo de retraso equivale a recorrer <span class="text-red-600 font-bold text-base">25 metros sin control</span>.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Gráfico Interactivo de Estadísticas -->
+            <div class="bg-white border border-gray-200 rounded-2xl p-5 shadow-sm fade-in-up">
+                <div class="flex items-center gap-2 mb-4">
+                    <i class="fa-solid fa-chart-column text-teal text-xl"></i>
+                    <h3 class="font-heading font-bold text-darkTeal text-lg">Realidad Vial en Ecuador</h3>
+                </div>
+
+                <!-- Tarjeta KPI de 6 Fallecidos -->
+                <div class="bg-darkTeal text-white rounded-xl p-4 mb-5 flex items-center justify-between shadow-inner relative overflow-hidden">
+                    <div class="absolute -right-2 -top-2 opacity-20">
+                        <i class="fa-solid fa-triangle-exclamation text-6xl"></i>
+                    </div>
+                    <div class="relative z-10">
+                        <p class="text-xs text-lightBlue uppercase tracking-wider font-semibold mb-1">Promedio Nacional Alarmante</p>
+                        <div class="flex items-baseline gap-2">
+                            <span class="text-4xl font-heading font-extrabold text-brandYellow">6</span>
+                            <span class="text-sm font-medium">fallecidos diarios</span>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="text-sm text-gray-600 mb-4 leading-relaxed">
+                    Según los reportes de la ANT (2024-2025), el consumo de sustancias durante los fines de semana incide directamente en los accidentes reportados.
+                </p>
+                
+                <!-- Contenedor del Gráfico -->
+                <div class="relative h-60 w-full mb-2">
+                    <canvas id="siniestrosChart"></canvas>
+                </div>
+                
+                <p class="text-xs text-gray-400 text-center italic mt-2">
+                    * Datos referenciales contrastados con boletines de la ANT y proyecciones de seguridad vial para 2026.
+                </p>
+            </div>
+        </section>
+
+        <!-- Nueva Sección: Concientización -->
+        <section class="px-6 pb-12 fade-in-up">
+            <div class="bg-brandYellow/10 border border-brandYellow/30 rounded-2xl p-6 shadow-sm relative overflow-hidden">
+                <i class="fa-solid fa-heart-circle-check absolute -right-4 -bottom-4 text-8xl text-brandYellow/20"></i>
+                <div class="relative z-10">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="bg-brandYellow text-darkTeal w-10 h-10 rounded-full flex items-center justify-center text-xl shrink-0">
+                            <i class="fa-solid fa-hand-holding-heart"></i>
+                        </div>
+                        <h2 class="font-heading text-xl font-bold text-darkTeal">El Valor de la Prevención</h2>
+                    </div>
+                    <p class="text-gray-700 text-sm leading-relaxed mb-3">
+                        Prevenir no se trata de juzgar, señalar o imponer reglas rígidas, sino de <strong>cuidar lo que más valoramos: nuestra salud, nuestras familias y nuestro entorno laboral</strong>. Las adicciones son una condición de salud humana que a menudo se desarrolla de forma silenciosa como respuesta al estrés o problemas personales.
+                    </p>
+                    <p class="text-gray-700 text-sm leading-relaxed">
+                        Fomentar esta cultura significa construir un espacio de empatía. Queremos que todos puedan hablar libremente, identificar señales tempranas y entender que <strong>pedir apoyo es un acto de valentía, no de debilidad</strong>. Juntos creamos una red de apoyo mutuo en las rutas y en la oficina.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Imagen divisoria (Familia y Bienestar) -->
+        <div class="px-6 py-2 fade-in-up">
+            <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                 alt="[Padre de familia feliz compartiendo con sus hijos, motivando la prevención]" 
+                 class="h-48 w-full object-cover rounded-2xl shadow-md border-2 border-gray-100 bg-white"
+                 onerror="this.src='https://via.placeholder.com/800x400?text=Imagen+No+Disponible'">
+        </div>
+
+        <!-- Sección 2: Estrategias por Perfil (Tarjetas) -->
+        <section class="bg-lightBlue px-6 py-10 mt-8 fade-in-up rounded-3xl mx-2">
+            <h2 class="font-heading text-2xl font-bold text-darkTeal mb-6 text-center">Estrategias de Prevención</h2>
+            
+            <div class="grid gap-4">
+                <!-- Tarjeta Personal Operativo -->
+                <div class="bg-white p-5 rounded-2xl shadow-sm flex gap-4 items-start border-l-4 border-teal">
+                    <div class="bg-teal/10 p-3 rounded-xl text-teal shrink-0">
+                        <i class="fa-solid fa-steering-wheel text-xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-heading font-bold text-darkTeal mb-1">Personal Operativo (Choferes)</h4>
+                        <p class="text-sm text-gray-600 mb-2"><strong>Tolerancia Cero:</strong> Alcoholemia electrónica y reactivos aleatorios en turnos vulnerables (viernes, lunes y madrugadas).</p>
+                        <span class="inline-block bg-teal/10 text-teal font-bold text-xs px-2 py-0.5 rounded">
+                            "Tu Familia es tu Copiloto"
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Tarjeta Personal Administrativo -->
+                <div class="bg-white p-5 rounded-2xl shadow-sm flex gap-4 items-start border-l-4 border-midBlue">
+                    <div class="bg-midBlue/10 p-3 rounded-xl text-midBlue shrink-0">
+                        <i class="fa-solid fa-headset text-xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-heading font-bold text-darkTeal mb-1">Personal Administrativo y Mandos</h4>
+                        <p class="text-sm text-gray-600">Mitigación del estrés, ansiedad y <em>burnout</em>. Capacitados para actuar como primer filtro de detección física/conductual en conductores y planificar rutas equilibradas que eviten la fatiga extrema.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección 3: Flujo Operativo y Gestión SUT -->
+        <section class="px-6 py-12 bg-midBlue text-white mt-8 fade-in-up">
+            <div class="text-center mb-8">
+                <h2 class="font-heading text-2xl font-bold mb-2">Flujo del Programa</h2>
+                <p class="text-lightBlue text-sm">Procesos técnicos obligatorios y auditorías ante el Estado</p>
+            </div>
+
+            <ul class="space-y-6">
+                <li class="flex gap-4 items-start">
+                    <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center shrink-0">
+                        <i class="fa-solid fa-square-poll-horizontal text-white"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-heading font-bold text-lg">1. Diagnóstico y Detección</h4>
+                        <p class="text-sm text-blue-100 opacity-90">Aplicación obligatoria de las test de factores de riesgo y detección antidrogas para medir la vulnerabilidad real de la empresa.</p>
+                    </div>
+                </li>
+
+                <li class="flex gap-4 items-start">
+                    <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center shrink-0">
+                        <i class="fa-solid fa-user-doctor text-white"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-heading font-bold text-lg">2. Canal de Ayuda Confidencial</h4>
+                        <p class="text-sm text-blue-100 opacity-90">Talento Humano y administrativo se realiza la solicitud de asistencia voluntaria con fines de rehabilitación, libre de represalias.</p>
+                    </div>
+                </li>
+
+                <li class="flex gap-4 items-start">
+                    <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center shrink-0">
+                        <i class="fa-solid fa-chart-line text-white"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-heading font-bold text-lg">3. Evaluación e Indicadores</h4>
+                        <p class="text-sm text-blue-100 opacity-90">Control semestral y anual mediante la Matriz de Indicadores (personal capacitado, controles y derivaciones) para blindaje legal ante inspecciones.</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Imagen divisoria final Actualizada (Equipo/Apoyo) -->
+        <div class="px-6 py-8 bg-white fade-in-up">
+            <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=800&q=80" 
+                 alt="[Imagen de profesionales interactuando amigablemente en un entorno corporativo de tecnología y logística]" 
+                 class="h-56 w-full object-cover rounded-3xl shadow-md bg-white"
+                 onerror="this.src='https://via.placeholder.com/800x400?text=Imagen+No+Disponible'">
+        </div>
+
+        <!-- Sección 4: Canales de Contacto Médico y Soporte -->
+        <section class="px-6 py-4 pb-10 bg-white fade-in-up">
+            <h2 class="font-heading text-2xl font-bold text-darkTeal mb-6 text-center">¿Necesitas ayuda?</h2>
+            
+            <div class="space-y-4">
+                <!-- Botón de WhatsApp Canal de Ayuda -->
+                <a href="https://wa.me/593998245690" target="_blank" class="block w-full bg-teal/10 hover:bg-teal/20 transition-colors rounded-2xl p-4 border border-teal/20 active:scale-95 transform duration-150">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-teal text-white rounded-full flex items-center justify-center text-2xl shrink-0">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h4 class="font-heading font-bold text-darkTeal text-lg mb-1">Canal de ayuda</h4>
+                            <p class="text-sm text-gray-600 font-medium">Talento Humano EnvialoSeguro S.A.</p>
+                            <p class="text-lg font-bold text-teal mt-1 tracking-wide">+593 99 824 5690</p>
+                        </div>
+                        <i class="fa-solid fa-arrow-right text-teal opacity-50"></i>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-darkTeal text-center py-8 px-6 rounded-t-3xl border-t-4 border-brandYellow mt-4">
+            <div class="flex justify-center items-center gap-2 mb-2 text-white">
+                <i class="fa-solid fa-cube text-2xl text-brandYellow"></i>
+                <span class="font-heading font-bold text-lg">Envíalo Seguro S.A.</span>
+            </div>
+            <p class="text-lightBlue text-xs mt-2 opacity-80">© 2026 Todos los derechos reservados.</p>
+        </footer>
+
+    </main>
+
+    <!-- Scripts para interactividad y Gráficos -->
+    <script>
+        // --- 1. Lógica del Gráfico Chart.js ---
+        document.addEventListener("DOMContentLoaded", function() {
+            const ctx = document.getElementById('siniestrosChart').getContext('2d');
+            
+            // Datos representativos basados en reportes ANT Ecuador 2024-2025 y proyección 2026
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['2024', '2025', '2026 (Proy.)'],
+                    datasets: [
+                        {
+                            label: 'Siniestros por Sustancias',
+                            data: [1845, 1620, 1310],
+                            backgroundColor: 'rgba(52, 143, 147, 0.85)', // Teal
+                            borderColor: '#348f93',
+                            borderWidth: 1,
+                            borderRadius: 4,
+                            barPercentage: 0.6
+                        },
+                        {
+                            type: 'line',
+                            label: 'Tendencia de Riesgo (%)',
+                            data: [15, 13.5, 10.8],
+                            backgroundColor: 'rgba(252, 192, 16, 1)', // BrandYellow
+                            borderColor: '#fcc010',
+                            borderWidth: 3,
+                            tension: 0.3, // Curva suave
+                            yAxisID: 'y1'
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    animation: {
+                        duration: 2500,
+                        easing: 'easeOutQuart'
+                    },
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                font: { family: 'Lato', size: 11 },
+                                usePointStyle: true
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: 'Nº de Siniestros',
+                                font: { size: 10 }
+                            }
+                        },
+                        y1: {
+                            position: 'right',
+                            beginAtZero: true,
+                            grid: { drawOnChartArea: false },
+                            title: {
+                                display: true,
+                                text: 'Porcentaje (%)',
+                                font: { size: 10 }
+                            }
+                        }
+                    }
+                }
+            });
+        });
+
+        // --- 2. Lógica de los acordeones ---
+        function toggleAccordion(button) {
+            const content = button.nextElementSibling;
+            
+            // Cerrar todos los demás primero
+            document.querySelectorAll('.accordion-content').forEach(el => {
+                if(el !== content) {
+                    el.style.maxHeight = null;
+                    el.previousElementSibling.classList.remove('active');
+                }
+            });
+
+            // Alternar el actual
+            button.classList.toggle('active');
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        }
+
+        // --- 3. Lógica para revelar elementos al hacer scroll ---
+        document.addEventListener("DOMContentLoaded", function() {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-in-up').forEach((el) => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
